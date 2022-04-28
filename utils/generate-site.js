@@ -1,21 +1,21 @@
 const fs = require('fs');
 
-const writeFile = fileContent => {
-    return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/index.html', fileContent, err => {
-            if (err) {
-                reject(err);
-                //return to stop any further activity
-                return;
-            }
-            //if everything went well then resolve the prompt and send the successful data to the `then` method
-            resolve({
-                okay: true,
-                message: 'file created!'
-            });
-        });
-    });
-};
+// const writeFile = fileContent => {
+//     return new Promise((resolve, reject) => {
+//         fs.writeFile('./dist/index.html', fileContent, err => {
+//             if (err) {
+//                 reject(err);
+//                 //return to stop any further activity
+//                 return;
+//             }
+//             //if everything went well then resolve the prompt and send the successful data to the `then` method
+//             resolve({
+//                 okay: true,
+//                 message: 'file created!'
+//             });
+//         });
+//     });
+// };
 //copying stylesheet and outputting it to dist folder.
 const copyFile = () => {
     return new Promise((resolve, reject) => {
@@ -32,4 +32,4 @@ const copyFile = () => {
     });
 };
 
-module.exports = { writeFile, copyFile};
+module.exports = copyFile;
